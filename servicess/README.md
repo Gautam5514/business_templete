@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FieldDesk — Field Service Business Control OS
 
-## Getting Started
+Demo app for **PrimeCare Service Solutions Pvt. Ltd.** (AC, CCTV, RO, electrical, appliance and facility service across Ranchi, Dhanbad, Jamshedpur and Patna).
 
-First, run the development server:
+> Every customer. Every job. Every technician. Fully under control.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev   # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+All data is deterministic demo data in `data/` (seeded RNG, no backend). Demo state (assignments, route optimisation, theme, role) lives in `lib/store.js`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Sales demo path
+1. **Command Center** — 86 requests, 52 technicians active, 6 unassigned, ₹16.8L outstanding.
+2. **Dispatch Board** — open JOB-2841 (Apex Mall, emergency), assign the recommended technician (Rohit Kumar) or drag the job onto a lane.
+3. **Job 360°** (`/jobs/JOB-2841`) — press *Play journey* to walk request → diagnosis → estimate → parts → sign-off → invoice → payment.
+4. **Customer 360°** (`/customers/C001`) → **Asset 360°** (`/assets/AC-28941`) — repeat-failure insight.
+5. **Ask FieldDesk** — "Which jobs need attention right now?"
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Other screens: Control Room (`/control-room`), Technician mobile app (`/mobile`), customer tracking (`/track/JOB-2818`), dark mode and role switcher (sidebar footer), ⌘K global search, Create menu.
