@@ -1,0 +1,15 @@
+export const ROLES = [
+  { key: "owner", label: "Owner / Managing Director", person: "Arjun Mehta", all: true },
+  { key: "director", label: "Project Director", person: "Sanjay Rao", all: true },
+  { key: "pm", label: "Project Manager", person: "Rahul Sinha", allow: ["command-center", "projects", "live-sites", "planning", "tasks", "boq", "procurement", "materials", "inventory", "contractors", "labour", "progress", "quality", "safety", "equipment", "expenses", "documents", "photos", "approvals", "activity", "assistant"] },
+  { key: "engineer", label: "Site Engineer", person: "Site Engineer", mobile: true, allow: ["live-sites", "tasks", "progress", "materials", "inventory", "photos", "quality", "safety", "equipment", "labour", "assistant"] },
+  { key: "planning", label: "Planning Engineer", person: "Planning Engineer", allow: ["projects", "planning", "tasks", "boq", "progress", "documents", "reports"] },
+  { key: "qs", label: "Quantity Surveyor", person: "Neha Gupta", allow: ["projects", "boq", "contractors", "billing", "vendor-bills", "documents", "reports", "approvals"] },
+  { key: "purchase", label: "Purchase Manager", person: "Purchase Manager", allow: ["procurement", "materials", "inventory", "vendor-bills", "payments", "approvals", "documents"] },
+  { key: "store", label: "Store Manager", person: "Vikas Singh", mobile: true, allow: ["materials", "inventory", "procurement", "photos"] },
+  { key: "accounts", label: "Accounts Manager", person: "Accounts Manager", allow: ["expenses", "billing", "vendor-bills", "payments", "reports", "approvals", "documents"] },
+  { key: "contractor", label: "Contractor Manager", person: "Contractor Manager", allow: ["contractors", "labour", "vendor-bills", "projects", "approvals", "documents"] },
+  { key: "quality", label: "Quality Engineer", person: "Quality Engineer", mobile: true, allow: ["quality", "photos", "documents", "progress"] },
+  { key: "safety", label: "Safety Officer", person: "Safety Officer", mobile: true, allow: ["safety", "labour", "photos", "equipment"] },
+  { key: "admin", label: "Admin", person: "System Admin", allow: ["settings", "activity", "documents"] },
+];
